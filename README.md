@@ -19,6 +19,7 @@ To open the WozEmu menu, press **^C**.
 | r   | Reset the emulated CPU                     |
 | p   | Power-cycle the emulated Apple-I           |
 | l   | Load a raw binary file at a memory address |
+| c   | Clear the screen                           |
 
 ## License
 All files within this repo are released under the GNU GPL V3 License as per the LICENSE file stored in the root of this repo.
