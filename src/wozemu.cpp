@@ -29,6 +29,7 @@ void wozemu_interface(int signal) {
     printf("* Reset:        r\n");
     printf("* Power cycle:  p\n");
     printf("* Load binary:  l\n");
+    printf("* Clear screen: c\n");
     printf("\nEnter choice: ");
 
     char in;
@@ -49,7 +50,8 @@ void wozemu_interface(int signal) {
             std::cin >> std::hex >> addr;
             apple1->load(filename.c_str(), addr);
             break;
-        } 
+        }
+        case 'c': system("clear"); break;
     }
 
     tcsetattr(STDIN_FILENO, TCSANOW, &old_attr);
