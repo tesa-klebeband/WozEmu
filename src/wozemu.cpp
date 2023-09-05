@@ -42,13 +42,21 @@ void wozemu_interface(int signal) {
         case 'p': apple1->power_cycle(); break;
         case 'l': {
             std::string filename;
+            std::string hex_str;
             uint16_t addr;
 
             printf("Enter filename: ");
             std::cin >> filename;
             printf("Enter load address (hex): ");
-            std::cin >> std::hex >> addr;
-            apple1->load(filename.c_str(), addr);
+            std::cin >> hex_str;
+
+            std::istringstream ss(hex_str);
+            ss >> std::hex >> addr;
+            if (ss.fail() || !ss.eof()) {
+                printf("Invalid hexadecimal input.\n");
+            } else {
+                apple1->load(filename.c_str(), addr);
+            }
             break;
         }
         case 'c': system("clear"); break;
