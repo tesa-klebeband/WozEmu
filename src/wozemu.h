@@ -5,6 +5,8 @@
 #include <signal.h>
 #include <termios.h>
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 
 #include "cpu.h"
 #include "memory.h"
