@@ -9,7 +9,7 @@ To build WozEmu navigate to the root of this project and run `make`. All output 
 ## Using WozEmu
 `build/wozemu`
 
-WozEmu uses the console in order to emulate a virtual Display and Keyboard. Upon executing WozEmu, the typical '\' from the Apple-I computer will appear on your console indicating that wozmon is ready to take commands.
+WozEmu uses the console in order to emulate a virtual Display and Keyboard. Upon executing WozEmu, the typical backslash from the Apple-I computer will appear on your console indicating that wozmon is ready to take commands.
 
 To open the WozEmu menu, press **^C**.
 | Key | Command                                    |
